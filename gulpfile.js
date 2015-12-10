@@ -3,6 +3,7 @@ var webpack = require('webpack-stream');
 var watch = require('gulp-watch');
 var batch = require('gulp-batch');
 var connect = require('gulp-connect');
+var copy = require('gulp-copy');
 
 // Run webpack
 gulp.task('webpack', function(){
@@ -12,6 +13,7 @@ gulp.task('webpack', function(){
     .pipe(connect.reload());
 });
 
+// Run the webserver
 gulp.task('webserver', function() {
   connect.server({
     livereload: true,
@@ -19,5 +21,11 @@ gulp.task('webserver', function() {
   });
 });
 
+// Copy index.html file
+gulp.task('build.index', function(){
+  return gulp.src('./src/index.html')
+    .pipe(gulp.dest('./dist'));
+});
+
 // Default task
-gulp.task('default', ['webpack', 'webserver']);
+gulp.task('default', ['webpack', 'webserver', 'build.index']);

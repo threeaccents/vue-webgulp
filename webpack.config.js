@@ -18,6 +18,14 @@ module.exports =  {
         // for normal use cases only node_modules is needed.
         exclude: /node_modules|vue\/src|vue-router\//,
         loader: 'babel'
+      },
+      {
+        test: /\.html$/,
+        loader: "html"
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
       }
     ]
   },
