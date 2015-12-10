@@ -26,19 +26,21 @@ _Does not rely on any global dependencies._
 ├── src
 │   ├── components
 │   │   ├── About.Vue
+│   │   |── App.vue
 │   │   |── Home.vue
-│   │   └── App.vue
+│   │   └── Quote.vue
+│   |── services
+│   |    └── quote
+|   |       └── index.js
 │   ├── index.html
-│   └── services
-│       ├── name_list.ts
-│       └── name_list_spec.ts
+|   └── app.scss
 ├── dist
 │   |── js
 │   |   └── app.js
-│   |── index.html
+│   └── index.html
 ├── gulpfile.js
 ├── webpack.config.js
-├── package.json
+└── package.json
 ```
 
 # License
