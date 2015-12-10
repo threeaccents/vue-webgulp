@@ -27,3 +27,10 @@
     </div>
   </div>
 </template>
+
+<style lang="sass">
+  .quote-wrapper{
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.14);
+    padding: 30px;
+  }
+</style>
