@@ -44,38 +44,51 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	module.exports = __webpack_require__(6);
 
 
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _app = __webpack_require__(2);
+	var _app = __webpack_require__(7);
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _vue = __webpack_require__(6);
+	var _vue = __webpack_require__(11);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _vueResource = __webpack_require__(8);
+	var _vueResource = __webpack_require__(13);
 
 	var _vueResource2 = _interopRequireDefault(_vueResource);
 
-	var _vueRouter = __webpack_require__(16);
+	var _vueRouter = __webpack_require__(21);
 
 	var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-	var _app3 = __webpack_require__(17);
+	var _App = __webpack_require__(22);
 
-	var _app4 = _interopRequireDefault(_app3);
+	var _App2 = _interopRequireDefault(_App);
 
-	var _home = __webpack_require__(19);
+	var _Home = __webpack_require__(28);
 
-	var _home2 = _interopRequireDefault(_home);
+	var _Home2 = _interopRequireDefault(_Home);
+
+	var _About = __webpack_require__(31);
+
+	var _About2 = _interopRequireDefault(_About);
+
+	var _Quote = __webpack_require__(34);
+
+	var _Quote2 = _interopRequireDefault(_Quote);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -89,7 +102,16 @@
 	// Route config
 	router.map({
 	  '/home': {
-	    component: _home2.default
+	    name: 'home',
+	    component: _Home2.default
+	  },
+	  '/about': {
+	    name: 'about',
+	    component: _About2.default
+	  },
+	  '/quote': {
+	    name: 'quote',
+	    component: _Quote2.default
 	  }
 	});
 
@@ -104,19 +126,19 @@
 	});
 
 	// Start up our app
-	router.start(_app4.default, '#app');
+	router.start(_App2.default, '#app');
 
 /***/ },
-/* 2 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(3);
+	var content = __webpack_require__(8);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(10)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -133,21 +155,21 @@
 	}
 
 /***/ },
-/* 3 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(4)();
+	exports = module.exports = __webpack_require__(9)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "h1 {\n  font-size: 70px; }\n", ""]);
+	exports.push([module.id, "body {\n  padding-top: 70px;\n  /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */ }\n\n.navbar-fixed-top .nav {\n  padding: 15px 0; }\n\n.navbar-fixed-top .navbar-brand {\n  padding: 0 15px; }\n\n@media (min-width: 768px) {\n  body {\n    padding-top: 100px;\n    /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */ }\n  .navbar-fixed-top .navbar-brand {\n    padding: 15px 0; } }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 4 */
+/* 9 */
 /***/ function(module, exports) {
 
 	/*
@@ -203,7 +225,7 @@
 
 
 /***/ },
-/* 5 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -457,7 +479,7 @@
 
 
 /***/ },
-/* 6 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/*!
@@ -9857,10 +9879,10 @@
 	}
 
 	module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12)))
 
 /***/ },
-/* 7 */
+/* 12 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -9957,7 +9979,7 @@
 
 
 /***/ },
-/* 8 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9966,11 +9988,11 @@
 
 	function install(Vue) {
 
-	    var _ = __webpack_require__(9)(Vue);
+	    var _ = __webpack_require__(14)(Vue);
 
-	    Vue.url = __webpack_require__(10)(_);
-	    Vue.http = __webpack_require__(11)(_);
-	    Vue.resource = __webpack_require__(15)(_);
+	    Vue.url = __webpack_require__(15)(_);
+	    Vue.http = __webpack_require__(16)(_);
+	    Vue.resource = __webpack_require__(20)(_);
 
 	    Object.defineProperties(Vue.prototype, {
 
@@ -10002,7 +10024,7 @@
 	module.exports = install;
 
 /***/ },
-/* 9 */
+/* 14 */
 /***/ function(module, exports) {
 
 	/**
@@ -10088,7 +10110,7 @@
 
 
 /***/ },
-/* 10 */
+/* 15 */
 /***/ function(module, exports) {
 
 	/**
@@ -10251,16 +10273,16 @@
 
 
 /***/ },
-/* 11 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Service for sending network requests.
 	 */
 
-	var xhr = __webpack_require__(12);
-	var jsonp = __webpack_require__(14);
-	var Promise = __webpack_require__(13);
+	var xhr = __webpack_require__(17);
+	var jsonp = __webpack_require__(19);
+	var Promise = __webpack_require__(18);
 
 	module.exports = function (_) {
 
@@ -10417,14 +10439,14 @@
 
 
 /***/ },
-/* 12 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * XMLHttp request.
 	 */
 
-	var Promise = __webpack_require__(13);
+	var Promise = __webpack_require__(18);
 	var XDomain = window.XDomainRequest;
 
 	module.exports = function (_, options) {
@@ -10474,7 +10496,7 @@
 
 
 /***/ },
-/* 13 */
+/* 18 */
 /***/ function(module, exports) {
 
 	/**
@@ -10690,14 +10712,14 @@
 
 
 /***/ },
-/* 14 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * JSONP request.
 	 */
 
-	var Promise = __webpack_require__(13);
+	var Promise = __webpack_require__(18);
 
 	module.exports = function (_, options) {
 
@@ -10746,7 +10768,7 @@
 
 
 /***/ },
-/* 15 */
+/* 20 */
 /***/ function(module, exports) {
 
 	/**
@@ -10863,7 +10885,7 @@
 
 
 /***/ },
-/* 16 */
+/* 21 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13402,7 +13424,27 @@
 	module.exports = Router;
 
 /***/ },
-/* 17 */
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(23)
+
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(27)
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/rodrigo/programming/moneyMakers/cointrade/webapp/src/components/App.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+	  }
+	})()}
+
+/***/ },
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -13411,95 +13453,307 @@
 	  value: true
 	});
 
-	var _app = __webpack_require__(18);
+	var _Navbar = __webpack_require__(24);
 
-	var _app2 = _interopRequireDefault(_app);
+	var _Navbar2 = _interopRequireDefault(_Navbar);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
 	  name: "App",
 
-	  template: _app2.default
+	  components: {
+	    Navbar: _Navbar2.default
+	  }
 	};
+	// </script>
+
+	// <template>
+	//   <navbar></navbar>
+	//   <router-view></router-view>
+	// </template>
+	// <script>
 
 /***/ },
-/* 18 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"app-wrapper\">\n  <router-view></router-view>\n</div>\n";
-
-/***/ },
-/* 19 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	module.exports = __webpack_require__(25)
+
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(26)
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/rodrigo/programming/moneyMakers/cointrade/webapp/src/components/Navbar.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+	  }
+	})()}
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <script>
+	exports.default = {
+	  name: "Navbar"
+	};
+	// </script>
+
+	// <template>
+	//   <!-- Navigation -->
+	//     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	//         <div class="container">
+	//             <!-- Brand and toggle get grouped for better mobile display -->
+	//             <div class="navbar-header">
+	//                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	//                     <span class="sr-only">Toggle navigation</span>
+	//                     <span class="icon-bar"></span>
+	//                     <span class="icon-bar"></span>
+	//                     <span class="icon-bar"></span>
+	//                 </button>
+	//                 <a class="navbar-brand" href="#">
+	//                     <img src="http://placehold.it/150x50&text=Logo" alt="">
+	//                 </a>
+	//             </div>
+	//             <!-- Collect the nav links, forms, and other content for toggling -->
+	//             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	//                 <ul class="nav navbar-nav">
+	//                     <li>
+	//                         <a v-link="{ name: 'home'}">Home</a>
+	//                     </li>
+	//                     <li>
+	//                         <a v-link="{ name: 'about'}">About</a>
+	//                     </li>
+	//                     <li>
+	//                         <a v-link="{ name: 'quote'}">Quote</a>
+	//                     </li>
+	//                 </ul>
+	//             </div>
+	//             <!-- /.navbar-collapse -->
+	//         </div>
+	//         <!-- /.container -->
+	//     </nav>
+	// </template>
+
+/***/ },
+/* 26 */
+/***/ function(module, exports) {
+
+	module.exports = "<!-- Navigation -->\n    <nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n        <div class=\"container\">\n            <!-- Brand and toggle get grouped for better mobile display -->\n            <div class=\"navbar-header\">\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n                    <span class=\"sr-only\">Toggle navigation</span>\n                    <span class=\"icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n                </button>\n                <a class=\"navbar-brand\" href=\"#\">\n                    <img src=\"http://placehold.it/150x50&text=Logo\" alt=\"\">\n                </a>\n            </div>\n            <!-- Collect the nav links, forms, and other content for toggling -->\n            <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n                <ul class=\"nav navbar-nav\">\n                    <li>\n                        <a v-link=\"{ name: 'home'}\">Home</a>\n                    </li>\n                    <li>\n                        <a v-link=\"{ name: 'about'}\">About</a>\n                    </li>\n                    <li>\n                        <a v-link=\"{ name: 'quote'}\">Quote</a>\n                    </li>\n                </ul>\n            </div>\n            <!-- /.navbar-collapse -->\n        </div>\n        <!-- /.container -->\n    </nav>";
+
+/***/ },
+/* 27 */
+/***/ function(module, exports) {
+
+	module.exports = "<navbar></navbar>\n  <router-view></router-view>";
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(29)
+
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(30)
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/rodrigo/programming/moneyMakers/cointrade/webapp/src/components/Home.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+	  }
+	})()}
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <script>
+	exports.default = {
+	  name: "Home"
+	};
+	// </script>
+
+	// <template>
+	//   <div class="container">
+	//     <div class="row">
+	//       <div class="col-md-8 col-md-offset-2">
+	//         <h1>Congratulations your app is working!</h1>
+	//         <h4>Now navigate around to find out more</h4>
+	//       </div>
+	//     </div>
+	//   </div>
+	// </template>
+
+/***/ },
+/* 30 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-8 col-md-offset-2\">\n        <h1>Congratulations your app is working!</h1>\n        <h4>Now navigate around to find out more</h4>\n      </div>\n    </div>\n  </div>";
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(32)
+
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(33)
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/rodrigo/programming/moneyMakers/cointrade/webapp/src/components/About.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+	  }
+	})()}
+
+/***/ },
+/* 32 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <script>
+	exports.default = {
+	  name: "About"
+	};
+	// </script>
+
+	// <template>
+	//   <div class="container">
+	//     <div class="col-md-6 col-md-offset-3">
+	//       <h2>About US</h2>
+	//       <p>
+	//         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	//       </p>
+	//     </div>
+	//   </div>
+	// </template>
+
+/***/ },
+/* 33 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"container\">\n    <div class=\"col-md-6 col-md-offset-3\">\n      <h2>About US</h2>\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n      </p>\n    </div>\n  </div>";
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(35)
+
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(36)
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/rodrigo/programming/moneyMakers/cointrade/webapp/src/components/Quote.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+	  }
+	})()}
+
+/***/ },
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _home = __webpack_require__(20);
+	var _quote = __webpack_require__(37);
 
-	var _home2 = _interopRequireDefault(_home);
-
-	var _home3 = __webpack_require__(21);
-
-	var _home4 = _interopRequireDefault(_home3);
+	var _quote2 = _interopRequireDefault(_quote);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-	  name: 'Home',
+	  name: "Quote",
 
-	  template: _home2.default
+	  data: function data() {
+	    return {
+	      quote: ""
+	    };
+	  },
+
+	  ready: function ready() {
+	    var quote = _quote2.default.getQuote(this).quote;
+	    this.$set('quote', quote);
+	  }
 	};
+	// </script>
+
+	// <template>
+	//   <div class="container">
+	//     <div class="quote-wrapper">
+	//       <h2>Random Quote</h2>
+	//       <p>
+	//         {{quote}}
+	//       </p>
+	//     </div>
+	//   </div>
+	// </template>
+	// <script>
 
 /***/ },
-/* 20 */
+/* 36 */
 /***/ function(module, exports) {
 
-	module.exports = "<h1>Home</h1>\n";
+	module.exports = "<div class=\"container\">\n    <div class=\"quote-wrapper\">\n      <h2>Random Quote</h2>\n      <p>\n        {{quote}}\n      </p>\n    </div>\n  </div>";
 
 /***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
+/* 37 */
+/***/ function(module, exports) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
+	"use strict";
 
-	// load the styles
-	var content = __webpack_require__(22);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./home.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./home.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  getQuote: function getQuote(ctx) {
+	    // Here you would make a request to your server
 
-/***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "h1 {\n  font-size: 20px !important; }\n", ""]);
-
-	// exports
-
+	    // return ctx.$http.get('http://yourserver.com/api', function (data, status, request) {
+	    //       return data;
+	    //   }).error(function (data, status, request) {
+	    //       return data;
+	    //   })
+	    return {
+	      quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+	    };
+	  }
+	};
 
 /***/ }
 /******/ ]);

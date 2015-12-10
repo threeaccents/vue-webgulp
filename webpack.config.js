@@ -20,12 +20,12 @@ module.exports =  {
         loader: 'babel'
       },
       {
-        test: /\.html$/,
-        loader: "html"
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
       },
       {
-        test: /\.scss$/,
-        loaders: ["style", "css", "sass"]
+        test: /\.vue$/,
+        loader: 'vue'
       }
     ]
   },
