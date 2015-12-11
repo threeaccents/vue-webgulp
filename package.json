@@ -1,7 +1,7 @@
 {
   "name": "vue-webgulp",
   "version": "0.1.0",
-  "description": "a gulp and webpack vuejs skeleton",
+  "description": "Vue.js + Webpack + Gulp + Vue Loader skeleton",
   "main": "src/main.js",
   "directories": {
     "test": "test"
