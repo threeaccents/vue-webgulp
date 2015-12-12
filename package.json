@@ -9,9 +9,9 @@
   "keywords": [
     "vuejs",
     "starter",
-    "gulp"
-    "webpack"
-    "vue-loader"
+    "gulp",
+    "webpack",
+    "vue-loader",
     "kit",
     "skeleton"
   ],
