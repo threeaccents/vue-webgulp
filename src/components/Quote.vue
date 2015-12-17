@@ -18,7 +18,7 @@
 </script>
 
 <template>
-  <div class="container">
+  <div class="row">
     <div class="quote-wrapper">
       <h2>Random Quote</h2>
       <p>
