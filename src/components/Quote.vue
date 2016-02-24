@@ -11,8 +11,11 @@
     },
 
     ready: function() {
-      var quote  = QuoteService.getQuote(this).quote
-      this.$set('quote', quote);
+      var quote  = QuoteService.getQuote(this).then(function(data){
+        this.$set('quote', data[0].content);
+      }).catch(function(err){
+        console.log(error);
+      });
     }
   }
 </script>
