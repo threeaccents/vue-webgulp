@@ -11,7 +11,7 @@ It is something similar to the Vuejs Vue loader example but it uses Gulp.
 ```bash
 git clone https://github.com/rodzzlessa24/vue-webgulp.git
 cd vue-webgulp
-npm install   # or `npm run reinstall` if you get an error
+npm i   # or `npm run reinstall` if you get an error
 gulp     # start app
 ```
 _Does not rely on any global dependencies._
@@ -32,12 +32,10 @@ _Does not rely on any global dependencies._
 │   |── services
 │   |    └── quote
 |   |       └── index.js
+│   ├── app.scss
 │   ├── index.html
-|   └── app.scss
-├── dist
-│   |── js
-│   |   └── app.js
-│   └── index.html
+│   ├── main.js
+|   └── variables.scss
 ├── gulpfile.js
 ├── webpack.config.js
 └── package.json
