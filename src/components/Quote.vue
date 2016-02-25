@@ -11,10 +11,10 @@
     },
 
     ready: function() {
-      var quote  = QuoteService.getQuote(this).then(function(data){
-        this.$set('quote', data[0].content);
-      }).catch(function(err){
-        console.log(error);
+      var quote  = QuoteService.getQuote(this).then(function(response){
+        this.$set('quote', response.data[0].content);
+      }, function(response){
+        console.log(response);
       });
     }
   }
