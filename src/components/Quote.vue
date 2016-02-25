@@ -11,7 +11,7 @@
     },
 
     ready: function() {
-      var quote  = QuoteService.getQuote(this).then(function(response){
+      QuoteService.getQuote(this).then(function(response){
         this.$set('quote', response.data[0].content);
       }, function(response){
         console.log(response);
