@@ -1,6 +1,6 @@
 #Note
 
-I've created a CLI tool for scaffolding new projects generating components, services, and mixins. [VueCli](https://github.com/rodzzlessa24/vue-cli)
+I've created a CLI tool for scaffolding new projects generating components, services, and mixins. [VueGoCli](https://github.com/rodzzlessa24/vue-go-cli)
 
 # Introduction
 
