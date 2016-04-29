@@ -1,4 +1,4 @@
-import scss from './app.scss'
+import scss from './stylesheets/app.scss'
 
 import Vue from 'vue'
 import Resource from 'vue-resource'

@@ -33,7 +33,7 @@
 
 <style lang="sass">
   // Imports
-  @import "../variables.scss";
+  @import "../stylesheets/variables.scss";
 
   // Styles
   .quote-wrapper{
