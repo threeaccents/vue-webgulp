@@ -16,7 +16,7 @@ It is something similar to the Vuejs Vue loader example but it uses Gulp.
 git clone https://github.com/rodzzlessa24/vue-webgulp.git
 cd vue-webgulp
 npm i   # or `npm run reinstall` if you get an error
-gulp     # start app
+npm start    # start app
 ```
 _Does not rely on any global dependencies._
 
