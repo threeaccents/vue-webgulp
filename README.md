@@ -1,7 +1,3 @@
-#Note
-
-I've created a CLI tool for scaffolding new projects generating components, services, and mixins. [VueGoCli](https://github.com/rodzzlessa24/vue-go-cli)
-
 # Introduction
 
 A seed project for Vuejs, Webpack, and Gulp.
