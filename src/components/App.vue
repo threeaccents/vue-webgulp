@@ -2,7 +2,7 @@
   import Navbar from './Navbar.vue'
 
   export default {
-    name: "App",
+    name: "app",
 
     components: {
       Navbar
@@ -11,6 +11,8 @@
 </script>
 
 <template>
-  <navbar></navbar>
-  <router-view></router-view>
+  <div>
+    <navbar></navbar>
+    <router-view></router-view>
+  </div>
 </template>

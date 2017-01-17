@@ -1,6 +1,6 @@
 var webpack = require('webpack')
 
-module.exports =  {
+module.exports = {
   entry: [
     './src/main.js'
   ],
@@ -34,6 +34,9 @@ module.exports =  {
     plugins: ['transform-runtime']
   },
   resolve: {
-    modulesDirectories: ['node_modules']
+    modulesDirectories: ['node_modules'],
+    alias: {
+      'vue$': 'vue/dist/vue.common.js'
+    }
   }
 }

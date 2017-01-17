@@ -13,34 +13,33 @@ import Quote from './components/Quote.vue'
 Vue.use(Router)
 Vue.use(Resource)
 
-// Set up a new router
-var router = new Router()
-
-// Route config
-router.map({
-  '/home':{
+// route config
+let routes = [
+  {
+    path: '/home',
     name: 'home',
     component: Home
   },
-  '/about':{
+  {
+    path: '/about',
     name: 'about',
     component: About
   },
-  '/quote':{
+  {
+    path: '/quote',
     name: 'quote',
     component: Quote
-  }
-})
+  },
+  { path: '*', redirect: '/home' }
+]
 
-// For every new route scroll to the top of the page
-router.beforeEach(function () {
-  window.scrollTo(0, 0)
-})
-
-// If no route is matched redirect home
-router.redirect({
-  '*': '/home'
+// Set up a new router
+let router = new Router({
+  routes: routes
 })
 
 // Start up our app
-router.start(App, '#app')
+new Vue({
+  router: router,
+  render: h => h(App)
+}).$mount('#app')
