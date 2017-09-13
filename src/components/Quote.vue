@@ -2,17 +2,17 @@
   import QuoteService from '../services/quote'
 
   export default {
-    data: function () {
+    data () {
       return {
         quote: ""
       }
     },
 
-    mounted: function () {
+    mounted () {
       QuoteService.getQuote(this).then(resp => {
         this.quote = resp.data[0].content
-      }, function (response) {
-        console.log(response)
+      }, (err) => {
+        console.log(err)
       });
     }
   }
